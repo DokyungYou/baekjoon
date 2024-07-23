@@ -5,13 +5,14 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
+        StringBuilder sb = new StringBuilder();
         for(int i = 0; i < n; i++){
             for(int j = 0; j <= i; j++){
-                System.out.print("*");
+               sb.append("*");
             }
-            System.out.println();
+            sb.append("\n");
         }
         
-        
+        System.out.println(sb);
     }
 }
