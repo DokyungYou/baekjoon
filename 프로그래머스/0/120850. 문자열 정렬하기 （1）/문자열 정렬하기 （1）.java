@@ -8,9 +8,10 @@ class Solution {
             char c = my_string.charAt(i);
             if(c >= 48 && c <= 57){
                 list.add(Integer.valueOf(c - 48));
-                list.sort(null);
             }
         }
+        list.sort(null);
+
         
         int[] arr = new int[list.size()];
         
