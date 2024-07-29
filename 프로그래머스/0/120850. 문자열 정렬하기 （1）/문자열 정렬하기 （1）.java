@@ -8,6 +8,7 @@ class Solution {
             char c = my_string.charAt(i);
             if(c >= 48 && c <= 57){
                 list.add(Integer.valueOf(c - 48));
+                list.sort(null);
             }
         }
         
@@ -16,7 +17,6 @@ class Solution {
         for(int i = 0; i < arr.length; i++){
             arr[i] = list.get(i);
         }
-        Arrays.sort(arr);
         return arr;
     }
 }
