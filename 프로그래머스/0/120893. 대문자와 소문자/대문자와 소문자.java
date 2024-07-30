@@ -8,10 +8,10 @@ class Solution {
         for(int i = 0 ; i < my_string.length(); i++){
             
             c = my_string.charAt(i);
-            if(Character.isLowerCase(c)){
-                sb.append(Character.toUpperCase(c));
+            if(c >= 97){
+                sb.append((char)(c-32));
             }else{
-                sb.append(Character.toLowerCase(c));
+                sb.append((char)(c+32));
             }
             
         }
