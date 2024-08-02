@@ -2,21 +2,16 @@ import java.util.*;
 
 class Solution {
     public int solution(String my_string) {
-        StringTokenizer st = new StringTokenizer(my_string);
+
+        String[] strArr = my_string.split(" ");
         
-        int result = Integer.parseInt(st.nextToken());
-        char operator = '+';
-        while(st.hasMoreTokens()){
-            String str = st.nextToken();
+        int result = Integer.parseInt(strArr[0]);
+        for(int i = 2; i < strArr.length ; i+=2){
             
-            if(!Character.isDigit(str.charAt(0))){
-                operator = str.charAt(0);
+            if(strArr[i-1].equals("+")){
+                result += Integer.parseInt(strArr[i]);
             }else{
-                if(operator == '+'){
-                    result += Integer.parseInt(str);
-                }else{
-                    result -= Integer.parseInt(str);
-                }
+                result -= Integer.parseInt(strArr[i]);
             }
         }
         
