@@ -2,7 +2,6 @@ class Solution {
     public String solution(String polynomial) {
         String[] strArr = polynomial.split(" ");
         
-        String answer="";
         int xNum = 0;
         int num = 0;
     
@@ -20,30 +19,25 @@ class Solution {
         }
         
         
-        // x가 0, 1 일때
-        // 상수항이 0 일 때
+
+        StringBuilder sb = new StringBuilder();
         if(xNum != 0){
             if(xNum == 1){
-                answer += "x";
+               sb.append("x");
             }else{
-                answer+= xNum + "x";
+               sb.append(xNum).append("x");
             }
             
             if(num != 0){
-                answer+= " + " + num;
+                sb.append(" + ").append(num);
             }
             
         }else{
              if(num != 0){
-                answer+= num;
+                sb.append(num);
             }
         }
         
-        
-        
-       
-        
-        
-        return answer;
+        return sb.toString();
     }
 }
