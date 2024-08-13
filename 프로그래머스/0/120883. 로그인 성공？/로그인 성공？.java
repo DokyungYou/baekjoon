@@ -4,10 +4,11 @@ class Solution {
         boolean isSameId = false;
         for(int i = 0; i < db.length; i++){
             if(id_pw[0].equals(db[i][0])){
-                isSameId = true;
-                if(id_pw[1].equals(db[i][1]))  return "login";
+                if(id_pw[1].equals(db[i][1])) return "login";
+                
+                return "wrong pw";
             }
         }
-        return isSameId ? "wrong pw" : "fail";
+        return "fail";
     }
 }
